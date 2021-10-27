@@ -1,0 +1,21 @@
+{
+  "name": "wanted_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "author": "kim",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "express": "^4.17.1",
+    "express-paginate": "^1.0.2",
+    "jsonwebtoken": "8.5.1",
+    "moment": "2.26.0",
+    "sequelize": "^6.8.0",
+    "sqlite3": "^5.0.2"
+  }
+}
