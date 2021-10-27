@@ -63,7 +63,7 @@ router.post("/write", auth, (req, res) => {
 // @routes     GET /posts/detail/:id
 // @desc       글 확인
 // @access     public
-router.get("/datail/:id", (req, res) => {
+router.get("/detail/:id", (req, res) => {
   Post.findByPk(req.params.id)
     .then(({ title, content, nickname, id }) => {
       res.json({
@@ -99,13 +99,8 @@ router.get("/delete/:id", auth, (req, res) => {
 router.post("/edit/:id", auth, (req, res) => {
   const { title, content, nickname } = req.body;
   Post.update({ title, content, nickname }, { where: { id: req.params.id } })
-    .then(({ title, content, nickname, id }) => {
-      res.json({
-        title,
-        content,
-        nickname,
-        id,
-      });
+    .then(() => {
+      res.send("게시물 수정 완료");
     })
     .catch((e) => {
       console.error(e);
