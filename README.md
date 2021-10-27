@@ -20,6 +20,7 @@ POST auth/login 로그인 public
 GET auth/logout 로그아웃
 
 (게시글)
+GET /posts 글목록 public
 POST /posts/write 글 작성 user
 GET /posts/detail/:id 글 확인 public
 GET /posts/delete/:id 글 삭제 user
